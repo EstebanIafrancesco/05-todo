@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TodosService } from '../services/todos.service';
 
 @Component({
   selector: 'app-tab2',
@@ -6,7 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
-
-  constructor() {}
+  constructor(public todosService: TodosService) {
+  }
 
 }
