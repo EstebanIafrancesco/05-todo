@@ -8,10 +8,23 @@
 
 <ion-content color="dark" [fullscreen]="true">
   <ion-list color="dark">
-    <ion-item color="dark" color="dark"color="dark"*ngFor="let lista of todosService.listas " detail>
+    <ion-item
+      color="dark"
+      color="dark"
+      color="dark"
+      *ngFor="let lista of todosService.listas "
+      detail
+    >
       <ion-label>
         {{lista.titulo}}
       </ion-label>
     </ion-item>
   </ion-list>
+  <!-- fab placed to the top end -->
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="tertiary"
+                      (click)="agregarLista()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>
